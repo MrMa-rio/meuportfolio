@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 export const SocialImage = (props:{image_black:string, image_white:string, linkSocial:string, alt:string}) =>{
 

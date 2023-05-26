@@ -6,10 +6,12 @@ export const TypingAnimation = () => {
   const [cursorVisible, setCursorVisible] = useState(true);
   const targetText = "Prazer!! Meu nome é Mario, sou Desenvolvedor Front End. Bem vindo ao meu Portfólio.";
   let currentIndex = 0;
-  let typingInterval: NodeJS.Timeout;
+  let typingInterval: NodeJS.Timer
   if(currentIndex < targetText.length){
     useEffect(() => {
+      
       const typeText = () => {
+        
         if (currentIndex < targetText.length) {
           ++currentIndex;
           setText((prevText) => prevText + targetText[currentIndex-1]);
@@ -19,21 +21,18 @@ export const TypingAnimation = () => {
         }
       };
       typingInterval = setInterval(typeText, 110);
-  
-      return () => {
-        clearInterval(typingInterval);
-      };
-    }, []);
-    
-    useEffect(() => {
+
       const cursorInterval = setInterval(() => {
         setCursorVisible((prevCursorVisible) => !prevCursorVisible);
       }, 500);
   
       return () => {
+        clearInterval(typingInterval);
         clearInterval(cursorInterval);
       };
-    },[])
+    },[setText,setCursorVisible]);
+    
+    
   }
   return (
     <div className='bg-primary bg-opacity-10 rounded-lg'>
@@ -43,7 +42,7 @@ export const TypingAnimation = () => {
         <div className='w-3 h-3 bg-green-800 rounded-full'></div>
       </div>
       <div className='w-full px-10 pb-5'>
-        <p className='w-60 ssm:text-xl mini-tela:text-2xl font-roboto font-bold'>{text}{cursorVisible && <span>|</span>}</p>
+        <p className='w-60 xsm:text-xl mini-tela:text-2xl font-roboto font-bold'>{text}{cursorVisible && <span>|</span>}</p>
       </div>
     </div>
   );

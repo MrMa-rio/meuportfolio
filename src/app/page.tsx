@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import eu from "../assets/images/eu.png"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import {TypingAnimation} from "components/Writer"
 import { Navbar } from "components"
 import ArrowUp from '../assets/icons/arrowUp.svg'
