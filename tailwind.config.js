@@ -12,7 +12,27 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
+      colors: {
+        'primary': '#fe5332',
+        'secondary': '#fc8b02' ,
+        'terciary': '#fff11a',
+        'quartenary': '#d55957',
+
+      },
+      fontFamily: {
+        'roboto': ['roboto','ui-sans-serif', 'system-ui'],
+        'segoe': ["Segoe UI"],
+      },
+      screens: {
+        'ssm': '330px',
+        'sm': '390px',
+        'xsm': '450px',
+        'md': '600px',
+        'mini-tela': '770px',
+        'tela': '890px',
+        'mxl': '1000px'
+      },
+    }
   },
   plugins: [],
 }
