@@ -4,36 +4,35 @@ import React, { useState, useEffect } from 'react';
 export const TypingAnimation = () => {
   const [text, setText] = useState<string>('');
   const [cursorVisible, setCursorVisible] = useState(true);
-  const targetText = "Prazer!! Meu nome é Mario, sou Desenvolvedor Front End. Bem vindo ao meu Portfólio.";
+  const targetText = "Prazer!! Meu nome é Mário, sou Desenvolvedor Front End. Bem vindo ao meu Portfólio.";
   let currentIndex = 0;
   let typingInterval: NodeJS.Timer
-  if(currentIndex < targetText.length){
-    useEffect(() => {
+  useEffect(() => {
+    
+    const typeText = () => {
       
-      const typeText = () => {
-        
-        if (currentIndex < targetText.length) {
-          ++currentIndex;
-          setText((prevText) => prevText + targetText[currentIndex-1]);
-        } 
-        else{
-          clearInterval(typingInterval);
-        }
-      };
-      typingInterval = setInterval(typeText, 110);
-
-      const cursorInterval = setInterval(() => {
-        setCursorVisible((prevCursorVisible) => !prevCursorVisible);
-      }, 500);
-  
-      return () => {
+      if (currentIndex < targetText.length) {
+        ++currentIndex;
+        setText((prevText) => prevText + targetText[currentIndex-1]);
+      } 
+      else{
         clearInterval(typingInterval);
-        clearInterval(cursorInterval);
-      };
-    },[setText,setCursorVisible]);
-    
-    
-  }
+      }
+      return () =>{
+        clearInterval(typingInterval)
+      }
+    };
+    typingInterval = setInterval(typeText, 110);
+
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((prevCursorVisible) => !prevCursorVisible);
+
+      return () => {
+      clearInterval(cursorInterval);
+    };
+    }, 450);
+  },[currentIndex, targetText]);
+  
   return (
     <div className='bg-primary bg-opacity-10 rounded-lg'>
       <div className='flex flex-row gap-2 top-0 p-5'>
