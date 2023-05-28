@@ -1,10 +1,10 @@
 import { ScreenProjects } from "components/projects/ScreenProjects"
-import retangulo from '../../../../assets/images/retangulo.svg'
+import { curiosidadesandroid, breve } from "components/projects/ImageProjects/imageProjects"
 
 export const Css = () =>{
     return(
         <>
-        <ScreenProjects project1={retangulo} project2={retangulo} project3={retangulo} description={["Em breve...","Em breve...", "Em breve..."]} />
+            <ScreenProjects project1={curiosidadesandroid} project2={breve} project3={breve} description={["Curiosidades Android","Em breve...", "Em breve..."]} />
         </>
     )
 }

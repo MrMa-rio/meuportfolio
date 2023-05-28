@@ -19,23 +19,16 @@ import csharpO from '../../assets/icons/csharp_orange.svg'
 import reactB from '../../assets/icons/react_black.svg'
 import reactO from '../../assets/icons/react_orange.svg'
 
-export {tailwindB}
-export {tailwindO}
+export {tailwindB, tailwindO}
 
-export {pythonB}
-export {pythonO}
+export {pythonB, pythonO}
 
-export {javascriptB}
-export {javascriptO}
+export {javascriptB, javascriptO}
 
-export {htmlB}
-export {htmlO}
+export {htmlB, htmlO}
 
-export {cssB}
-export {cssO}
+export {cssB, cssO}
 
-export {csharpB}
-export {csharpO}
+export {csharpB, csharpO}
 
-export {reactB}
-export {reactO}
+export {reactB, reactO}

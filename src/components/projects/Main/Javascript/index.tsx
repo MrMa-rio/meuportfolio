@@ -1,11 +1,13 @@
 import { ScreenProjects } from "components/projects/ScreenProjects"
-import retangulo from '../../../../assets/images/retangulo.svg'
+import { meuprimeirojogo,meusegundojogo, calculadora } from "components/projects/ImageProjects/imageProjects"
 
 
 export const Javascript = () =>{
     return(
         <>
-            <ScreenProjects project1={retangulo} project2={retangulo} project3={retangulo} description={["Em breve...","Em breve...", "Em breve..."]}/>
+            <ScreenProjects project1={meuprimeirojogo} project2={meusegundojogo} project3={calculadora} description={["Meu Primeiro jogo","Snakezinho", "Calculadora"]}/>
         </>
     )
 }
+
+//https://gitpod.io/#https://github.com/MrMa-rio/myGame/
