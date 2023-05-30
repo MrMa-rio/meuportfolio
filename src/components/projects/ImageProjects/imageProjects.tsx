@@ -12,7 +12,9 @@ export {cornflixbr}
 //---
 // HTML ---------------------------------------------------
 import curiosidadesandroid from '../../../assets/images/p_curiosidadesandroid.png'
-export {curiosidadesandroid}
+import cordel from "../../../assets/images/p_cordel.png"
+import minhasredes from "../../../assets/images/p_minhasredes.png"
+export {curiosidadesandroid, cordel, minhasredes}
 // CSS ----------------------------------------------------
 //---
 // CSHARP -------------------------------------------------

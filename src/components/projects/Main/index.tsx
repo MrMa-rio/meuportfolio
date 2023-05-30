@@ -3,9 +3,7 @@ export const MainProject = (props:{typeLP:string})=>{
 
     return(
         <div className="bg-secondary w-full h-screen flex justify-center items-center ">
-            {props.typeLP == "Tailwind" ? 
-                <Tailwind />
-              : <></>}
+            {props.typeLP == "Tailwind" ? <Tailwind /> : <></>}
             {props.typeLP == "Javascript" ?  <Javascript /> : <></>}
             {props.typeLP == "Html" ?  <Html /> : <></>}
             {props.typeLP == "Css" ?  <Css /> : <></>}

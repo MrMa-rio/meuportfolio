@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 
 export const TypingAnimation = () => {
-  const [text, setText] = useState<string>('');
+  const [text, setText] = useState('');
   const [cursorVisible, setCursorVisible] = useState(true);
-  const targetText = "Prazer!! Meu nome é Mário, sou Desenvolvedor Front End. Bem vindo ao meu Portfólio.";
+  const targetText = "Prazer!! Meu nome é Mário, sou Desenvolvedor Front End. Bem vindo ao meu Portfólio."
   let currentIndex = 0;
   let typingInterval: NodeJS.Timer
   useEffect(() => {
@@ -21,7 +21,7 @@ export const TypingAnimation = () => {
       return () =>{
         clearInterval(typingInterval)
       }
-    };
+    }
     typingInterval = setInterval(typeText, 110);
 
     const cursorInterval = setInterval(() => {
@@ -31,7 +31,7 @@ export const TypingAnimation = () => {
       clearInterval(cursorInterval);
     };
     }, 450);
-  },[currentIndex, targetText]);
+  },[currentIndex, targetText])
   
   return (
     <div className='bg-primary bg-opacity-10 rounded-lg'>
@@ -44,5 +44,5 @@ export const TypingAnimation = () => {
         <p className='w-60 xsm:text-xl mini-tela:text-2xl font-roboto font-bold'>{text}{cursorVisible && <span>|</span>}</p>
       </div>
     </div>
-  );
+  )
 }

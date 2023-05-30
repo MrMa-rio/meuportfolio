@@ -19,7 +19,6 @@ export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function
                 spy={true}
                 smooth={true}
                 duration={1000}
-                
                 className="cursor-pointer w-full mini-tela:w-1/2 h-16"
             >
             <div className="bg-secondary bg-opacity-70  rounded-xl">

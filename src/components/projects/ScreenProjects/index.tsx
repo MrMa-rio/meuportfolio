@@ -1,16 +1,10 @@
 'use client'
-
-import { StaticImageData } from "next/image"
+import { ProjectsIcons } from "components/iconsLinguage/icons"
 import { ImageProject } from "../ImageProjects"
-export const ScreenProjects = (props:{project1:StaticImageData, project2:StaticImageData, project3:StaticImageData, description:string[]}) =>{
+export const ScreenProjects = (props:{projects:ProjectsIcons }) =>{
     return(
-        
         <div id="thumbImages" className=" ssm:w-screen  flex ssm:flex-col tela:flex-row gap-16 mini-tela:gap-6 justify-center items-center "> 
-            <ImageProject thumb={props.project1} description={props.description[0]} />
-            <ImageProject thumb={props.project2}  description={props.description[1]}/>
-            <ImageProject thumb={props.project3} description={props.description[2]} />
+            { Object.keys(props.projects).map((result) => <ImageProject thumb={props.projects[result].project} description={props.projects[result].description} Icon={props.projects[result].Icon} />) }
         </div>
-        
     )
-    
 }
