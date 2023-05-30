@@ -30,7 +30,7 @@ export const Css = () =>{
     }
     return(
         <>
-            <ScreenProjects projects={projects} />
+            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects} />
         </>
     )
 }

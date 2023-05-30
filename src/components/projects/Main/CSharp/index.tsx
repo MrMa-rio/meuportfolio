@@ -1,6 +1,6 @@
 import { ScreenProjects } from "components/projects/ScreenProjects"
-import { breve, curiosidadesandroid } from "components/projects/ImageProjects/imageProjects"
-import { tailwindW, csharpW, pythonW, projectsImage, ProjectsIcons } from "components/iconsLinguage/icons"
+import { breve } from "components/projects/ImageProjects/imageProjects"
+import { projectsImage, ProjectsIcons } from "components/iconsLinguage/icons"
 export const CSharp = () =>{
     const projectIcons: ProjectsIcons = {
         1:{},
@@ -24,7 +24,7 @@ export const CSharp = () =>{
     }
     return(
         <>
-            <ScreenProjects projects={projects}  />
+            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects}  />
         </>
     )
 }
