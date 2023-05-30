@@ -24,15 +24,18 @@ export const Javascript = () =>{
     const projects:projectsImage = {
         1:{project: meuprimeirojogo,
             description:"Meu primeiro jogo",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://gitpod.io/#https://github.com/MrMa-rio/myGame/"
         },
         2:{project: calculadora,
             description:"Calculadora",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://mrma-rio.github.io/Calculadora-V2.0/"
         },
         3:{project: meusegundojogo,
             description:"Snakezinho",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "http://gitpod.io/#https://github.com/MrMa-rio/mySecondGame"
         },
     }
     return(

@@ -19,12 +19,13 @@ export const CSharp = () =>{
         3:{
             project: breve,
             description:"Em Breve...",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            
         },
     }
     return(
         <>
-            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects}  />
+            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects} />
         </>
     )
 }

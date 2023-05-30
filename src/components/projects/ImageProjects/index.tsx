@@ -4,7 +4,6 @@ import { ContainsLinguage } from "./containsLinguage";
 import { Icon } from "components/iconsLinguage/icons";
 
 export const ImageProject = (props:{thumb:StaticImageData, description:string, Icon:Icon}) =>{
-    const description = String(props.description)
     const [show, setShow] = useState(false)
     const toggleShow = () =>{
         setShow(!show)
@@ -20,7 +19,7 @@ export const ImageProject = (props:{thumb:StaticImageData, description:string, I
                 { show ? <ContainsLinguage  Icon={props.Icon} /> : <></>}
             </div>
             <div className="w-full">
-                <p className="text-center font-bold w-full h-8 overflow-clip overflow-ellipsis text-xl">{description.trim() != "" ? props.description : "Em breve..."}</p>
+                <p className="text-center font-bold w-full h-8 overflow-clip overflow-ellipsis text-xl">{props.description}</p>
             </div>
         </div>
     )

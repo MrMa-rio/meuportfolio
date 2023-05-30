@@ -26,7 +26,8 @@ export const Tailwind = () =>{
         1:{
             project: cornflixbr,
             description:"Site Filmes (CornFlixBR)",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://cornflixbr.vercel.app/"
         },
         2:{
             project: breve,

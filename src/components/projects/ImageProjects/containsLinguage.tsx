@@ -9,5 +9,3 @@ export const ContainsLinguage = (props:{Icon:Icon}) =>{
       </div>
   )
 }
-
-  //Criar um vetor para que cada iteração crie um icone de uma linguagem

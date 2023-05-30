@@ -17,15 +17,18 @@ export const Css = () =>{
     const projects:projectsImage = {
         1:{project: curiosidadesandroid,
             description:"Curiosidades Android",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://mrma-rio.github.io/Curiosidades-Android/"
         },
         2:{project: cordel,
             description:"Cordel Moderno",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://mrma-rio.github.io/Desafio_Cordel/"
         },
         3:{project: minhasredes,
             description:"Minhas Redes",
-            Icon: projectIcons[1]
+            Icon: projectIcons[1],
+            Link: "https://mrma-rio.github.io/Projeto-social/"
         },
     }
     return(
