@@ -34,14 +34,14 @@ export const TypingAnimation = () => {
   },[currentIndex, targetText])
   
   return (
-    <div className='bg-primary bg-opacity-10 rounded-lg'>
+    <div className='bg-primary dark:bg-dark-primary bg-opacity-10 rounded-lg'>
       <div className='flex flex-row gap-2 top-0 p-5'>
-        <div className='w-3 h-3 bg-red-700 rounded-full'></div>
-        <div className='w-3 h-3 bg-orange-400 rounded-full'></div>
-        <div className='w-3 h-3 bg-green-800 rounded-full'></div>
+        <div className='w-3 h-3 bg-red-700 dark:bg-red-950 rounded-full'></div>
+        <div className='w-3 h-3 bg-orange-400 dark:bg-orange-800 rounded-full'></div>
+        <div className='w-3 h-3 bg-green-800 dark:bg-green-950 rounded-full'></div>
       </div>
       <div className='w-full px-10 pb-5'>
-        <p className='w-60 xsm:text-xl mini-tela:text-2xl font-roboto font-bold'>{text}{cursorVisible && <span>|</span>}</p>
+        <p className='w-60 xsm:text-xl mini-tela:text-2xl dark:text-white dark:text-opacity-70 font-roboto font-bold'>{text}{cursorVisible && <span>|</span>}</p>
       </div>
     </div>
   )

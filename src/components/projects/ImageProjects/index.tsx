@@ -9,7 +9,7 @@ export const ImageProject = (props:{thumb:StaticImageData, description:string, I
         setShow(!show)
     }
     return(
-        <div className="w-80 h-52 ssm:w-60 ssm:h-36 mini-tela:w-64 mini-tela:h-52 xl:w-72 flex flex-col gap-4 ">
+        <div className="w-80 h-52 ssm:w-60 ssm:h-fit mini-tela:w-64 mini-tela:h-fit xl:w-72 flex flex-col gap-4 ">
             <div 
             className="relative object-cover transition-all duration-300 ease-in-out transform-gpu hover:scale-110 opacity-75 hover:opacity-100" 
             onMouseEnter={toggleShow} 
@@ -19,7 +19,7 @@ export const ImageProject = (props:{thumb:StaticImageData, description:string, I
                 { show ? <ContainsLinguage  Icon={props.Icon} /> : <></>}
             </div>
             <div className="w-full">
-                <p className="text-center font-bold w-full h-8 overflow-clip overflow-ellipsis text-xl">{props.description}</p>
+                <p className="text-center dark:text-white dark:text-opacity-70 font-bold w-full h-8 overflow-clip overflow-ellipsis text-xl">{props.description}</p>
             </div>
         </div>
     )

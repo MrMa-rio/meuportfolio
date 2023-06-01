@@ -20,7 +20,6 @@ export const CSharp = () =>{
             project: breve,
             description:"Em Breve...",
             Icon: projectIcons[1],
-            
         },
     }
     return(

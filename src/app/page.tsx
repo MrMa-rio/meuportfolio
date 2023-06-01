@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image"
-import eu from "../assets/images/eu.png"
+import eu from "../assets/images/eu_light.png"
+import eu_night from "../assets/images/eu_night3.png"
 import React, { useState } from 'react'
 import {TypingAnimation} from "components/Writer"
 import { Navbar } from "components"
@@ -14,32 +15,35 @@ export default function Home() {
   const [screen, setScreen] = useState(false)
   const [typeLP, setTypeLP] = useState("Default")
   const [popup, setPopup] = useState(false)
+  const [MyImage,setMyImage] = useState<any>("light")
+
   const toggleScreen = (TypeLP:string) => {
-      
-      setScreen(true)
-      setTypeLP(TypeLP)
+    setScreen(true)
+    setTypeLP(TypeLP)
   }
   const togglePopup = () =>{
     setPopup(true)
   }
-    
-
+  const toggleMyImage = () =>{
+    setMyImage(localStorage.getItem("color-theme"))
+  }
   return (
-    <div>
-      <div id="AboutMe" className=' flex justify-center items-center flex-col  gap-8 h-screen bg-gradient-to-t from-secondary to-terciary '>
-        <nav className="fixed top-0">
+    <>
+      <div id="AboutMe" className=' flex justify-center items-center flex-col gap-8 h-screen bg-gradient-to-t from-secondary to-terciary  dark:from-dark-secondary dark:to-dark-primary dark:transition-colors dark:delay-200 dark:duration-1000 '>
+        <nav onClick={toggleMyImage} className="fixed top-0 w-screen">
           <Navbar />
         </nav>
-        
         <div className="flex ssm:flex-col ssm:gap-5 mini-tela:gap-16 justify-center mini-tela:flex-row mini-tela:justify-center items-center mini-tela:w-1/2 mini-tela:px-32">
           <TypingAnimation />
-          <Image src={eu} alt="MeuEuAnimado" className="rounded-full w-64 " />
+         { MyImage === "dark" ? <Image src={eu_night} alt="MeuEuAnimado" className="rounded-full w-64 " /> : <Image src={eu} alt="MeuEuAnimado" className="rounded-full w-64 " />}
         </div>
-          <IconsLinguage toggleScreen={toggleScreen} togglePopup={togglePopup} />
+          <IconsLinguage toggleScreen={toggleScreen} togglePopup={togglePopup} darkMode={MyImage} />
       </div>
-      { screen ? 
-        <MainProject typeLP={typeLP} />
-       : <></>}
+      <div>
+        { screen ?
+            <MainProject typeLP={typeLP} />
+         : <></>}
+      </div>
        {popup ? <div className="relative ">
         <Link
           to="AboutMe"
@@ -50,8 +54,7 @@ export default function Home() {
           <button className="fixed bottom-20 right-14 shadow-sm shadow-secondary bg-terciary opacity-90  w-16 h-16 rounded-full flex justify-center items-center " onClick={() => { setTimeout(() => setScreen(false), 950); setPopup(false)}}><Image src={ArrowUp} alt="ArrowUp" className="w-3/4 h-3/4" /> </button> 
         </Link>
           </div> : <></>}
-        
-    </div>
+    </>
   )
 }
 

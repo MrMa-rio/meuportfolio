@@ -17,6 +17,11 @@ module.exports = {
         'secondary': '#fc8b02' ,
         'terciary': '#fff11a',
         'quartenary': '#d55957',
+        'dark-primary': "#0D1B2C",
+        'dark-secondary': '#110E38',
+        'dark-terciary': "#111A42",
+        'dark-quartenary': "#244A78",
+        'dark-quinary': "#3771B8"
 
       },
       fontFamily: {
@@ -28,11 +33,14 @@ module.exports = {
         'sm': '390px',
         'xsm': '450px',
         'md': '600px',
-        'mini-tela': '770px',
+        'mini-tela': '825px',
         'tela': '890px',
         'mxl': '1000px'
       },
+      darkMode: 'class',
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
