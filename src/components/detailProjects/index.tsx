@@ -13,7 +13,7 @@ export const DetailProject = (props:{ project:Icon}) =>{
                         {props.project.codigo ? <a target="_blank" href={props.project.codigo}><button className='bg-quartenary bg-opacity-60 hover:bg-opacity-80 dark:bg-opacity-60 dark:hover:bg-opacity-80 dark:bg-dark-quartenary p-1 rounded-md'> <p>Ver Código</p></button></a> : <></>}
                     </div>
                     <div className="flex">
-                        {Object.keys(props.project.Icon).map((result) => <Image src={props.project.Icon[result].icon} alt={props.project.Icon[result].alt} className="w-10 dark:brightness-75" /> )}
+                        {Object.keys(props.project.Icon).map((result) => <Image key={Math.floor(Math.random() * 1000)}  src={props.project.Icon[result].icon} alt={props.project.Icon[result].alt} className="w-10 dark:brightness-75" /> )}
                     </div>
                 </div>
             </div>
