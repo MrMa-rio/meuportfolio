@@ -35,7 +35,6 @@ export const IconsLP = (props:{image_black:string, image_white:string, alt:strin
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
-    
     return(
         <div onClick={() => {props.screen(props.type); props.popup()} }  >
             <Image
@@ -45,17 +44,12 @@ export const IconsLP = (props:{image_black:string, image_white:string, alt:strin
             onMouseEnter={ () => {
                 handleMouseEnter()
                 props.screen(props.type)
-                
             }}
-            
             onMouseLeave={ () => {
                 handleMouseLeave()
-                
             }}
             onClick={() => props.screen(props.type)}
             />
-
-            
         </div>
     )
 }

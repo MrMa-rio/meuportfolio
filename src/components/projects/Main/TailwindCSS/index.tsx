@@ -1,5 +1,5 @@
 import { ScreenProjects } from "components/projects/ScreenProjects"
-import { breve, cornflixbr } from "components/projects/ImageProjects/imageProjects"
+import { breve, cornflixbr, cornflixbrV } from "components/projects/ImageProjects/imageProjects"
 import { ProjectsIcons, javascriptW, projectsImage, reactW, tailwindW } from "components/iconsLinguage/icons"
 
 
@@ -25,18 +25,20 @@ export const Tailwind = () =>{
     const projects:projectsImage = {
         1:{
             project: cornflixbr,
-            description:"Site Filmes (CornFlixBR)",
+            title:"Site Filmes (CornFlixBR)",
             Icon: projectIcons[1],
-            Link: "https://cornflixbr.vercel.app/"
+            site: "https://cornflixbr.vercel.app/",
+            description: "jnesufesfesunefsuenfusfsefuisen nufnseufunsefnsf nuesufs",
+            poster: cornflixbrV
         },
         2:{
             project: breve,
-            description:"Em Breve...",
+            title:"Em Breve...",
             Icon: projectIcons[2]
         },
         3:{
             project: breve,
-            description:"Em Breve...",
+            title:"Em Breve...",
             Icon: projectIcons[3]
         },
     }
