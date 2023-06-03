@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Link } from "react-scroll"
 import { DetailProject } from "components/detailProjects"
 import { ProjectEmpty } from "../Main/ProjectEmpty"
-export const ScreenProjects = (props:{projects:ProjectsIcons }) =>{
+export const ScreenProjectsDesktop = (props:{projects:ProjectsIcons }) =>{
 
     const [showDetail,setShowDetail] = useState<boolean>()
     const [project, setProject] = useState<Icon>(ProjectEmpty)
@@ -20,11 +20,11 @@ export const ScreenProjects = (props:{projects:ProjectsIcons }) =>{
         setProject(result)
     }
     return(
-        <div id="thumbImages" className="flex ssm:flex-col gap-16 justify-center items-center "> 
+        <div className="thumbImages flex ssm:flex-col gap-16 justify-center items-center "> 
             <div className="flex flex-col mini-tela:flex-row mini-tela:gap-6 " >
                 { Object.keys(props.projects).map((result) => {
                     return(
-                         <div key={Math.floor(Math.random() * 1000)} >
+                        <div key={Math.floor(Math.random() * 1000)} >
                             <Link
                             onClick={() => {targetProject(props.projects[result])} }
                             to="thumbImages"

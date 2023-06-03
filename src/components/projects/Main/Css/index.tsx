@@ -1,6 +1,7 @@
-import { ScreenProjects } from "components/projects/ScreenProjects"
+import { ScreenProjectsDesktop } from "components/projects/ScreenProjectsDesktop"
 import { curiosidadesandroid,curiosidadesV, cordel,cordelV, minhasredes,minhasredesV } from "components/projects/ImageProjects/imageProjects"
 import { ProjectsIcons, cssW, htmlW, projectsImage } from "components/iconsLinguage/icons"
+import { ScreenProjectMobile } from "components/projects/ScreenProjectsMobile"
 export const Css = () =>{
     const projectIcons: ProjectsIcons = {
         1:{
@@ -41,8 +42,13 @@ export const Css = () =>{
         },
     }
     return(
-        <>
-            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects} />
-        </>
+        <div>
+            <div className="hidden mini-tela:flex">
+                <ScreenProjectsDesktop key={Math.floor(Math.random() * 1000)} projects={projects} />
+            </div>
+            <div className="flex mini-tela:hidden">
+                <ScreenProjectMobile key={Math.floor(Math.random() * 1000)} projects={projects} />
+            </div>
+        </div>
     )
 }

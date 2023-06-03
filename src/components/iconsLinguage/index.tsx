@@ -15,7 +15,7 @@ export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function
     return(
         <>
             <Link
-                to="thumbImages"
+                to={"thumbImages" } 
                 spy={true}
                 smooth={true}
                 duration={1000}

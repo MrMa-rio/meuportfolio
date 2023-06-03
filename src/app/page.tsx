@@ -56,6 +56,7 @@ export default function Home() {
           <nav onClick={toggleMyImage} className="fixed top-0 w-screen">
             <Navbar />
           </nav>
+          
     </>
   )
 }

@@ -1,6 +1,7 @@
-import { ScreenProjects } from "components/projects/ScreenProjects"
+import { ScreenProjectsDesktop } from "components/projects/ScreenProjectsDesktop"
 import { meuprimeirojogo, meuprimeirojogoV, meusegundojogo, meusegundojogoV, calculadora, calculadoraV } from "components/projects/ImageProjects/imageProjects"
 import { ProjectsIcons, cssW, htmlW, javascriptW, projectsImage } from "components/iconsLinguage/icons"
+import { ScreenProjectMobile } from "components/projects/ScreenProjectsMobile"
 
 export const Javascript = () =>{
 
@@ -48,9 +49,14 @@ export const Javascript = () =>{
         },
     }
     return(
-        <>
-            <ScreenProjects key={Math.floor(Math.random() * 1000)} projects={projects} />
-        </>
+        <div>
+            <div className=" hidden md:flex">
+                    <ScreenProjectsDesktop key={Math.floor(Math.random() * 1000)} projects={projects} />
+            </div>
+            <div className="md:hidden w-full">
+                <ScreenProjectMobile key={Math.floor(Math.random() * 1000)} projects={projects} />
+            </div>
+        </div>
     )
 }
 

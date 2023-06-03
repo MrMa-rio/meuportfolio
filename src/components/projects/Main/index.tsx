@@ -28,6 +28,7 @@ export const MainProject = (props:{typeLP:string,darkMode:any})=>{
                     {props.typeLP == "ReactJs" ?  <ReactJs /> : <></>}
                 </div>
             </div>
+            
          </div>
     )
 }

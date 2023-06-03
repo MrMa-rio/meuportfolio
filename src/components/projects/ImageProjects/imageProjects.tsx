@@ -1,7 +1,8 @@
 import imageCharge from '../../../assets/images/no_image.png'
 import imageChargeMD from '../../../assets/images/no_image_md.png'
 import breve from '../../../assets/images/retangulo.png'
-export {breve, imageCharge,imageChargeMD}
+import breveV from '../../../assets/images/breveV.png'
+export {breve,breveV, imageCharge,imageChargeMD}
 // JAVASCRIPT ---------------------------------------------
 import meuprimeirojogo from '../../../assets/images/p_meuprimeirojogo.png'
 import meuprimeirojogoV from '../../../assets/images/snakeV.png'
