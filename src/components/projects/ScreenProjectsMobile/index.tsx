@@ -31,7 +31,7 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
         >
         { Object.keys(props.projects).map((result) => {
             return(
-                <div>
+                <div key={Math.floor(Math.random() * 1000)} >
                     <SwiperSlide key={Math.floor(Math.random() * 1000)} >
                         <div key={Math.floor(Math.random() * 1000)} className="w-full relative h-full flex justify-center items-center" >
                             <Link
