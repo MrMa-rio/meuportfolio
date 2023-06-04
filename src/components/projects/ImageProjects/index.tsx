@@ -11,11 +11,14 @@ export const ImageProject = (props:{thumb:StaticImageData, title:string, Icon:Ic
     return(
         <div className="ssm:w-fit ssm:fit ssm:py-5 mini-tela:w-64 mini-tela:h-fit xl:w-72 flex flex-col justify-center items-center ssm:gap-6 mini-tela:gap-4 ">
             <div 
-            className="relative object-cover ssm:w-3/4 mini-tela:w-fit  transition-all duration-300 ease-in-out transform-gpu hover:scale-110 opacity-75 hover:opacity-100" 
-            onMouseEnter={toggleShow} 
-            onMouseLeave={toggleShow}
+                className="relative object-cover ssm:w-3/4 mini-tela:w-fit  transition-all duration-300 ease-in-out transform-gpu hover:scale-110 opacity-75 hover:opacity-100" 
+                onMouseEnter={toggleShow} 
+                onMouseLeave={toggleShow}
             >
-                <Image src={props.thumb} alt="Thumb" className=" bg-black ssm:w-fit mini-tela:w-full rounded-xl shadow-md shadow-black" />
+                <Image 
+                    src={props.thumb} 
+                    alt="Thumb" 
+                    className=" bg-black ssm:w-72 mini-tela:w-full rounded-xl shadow-md shadow-black" />
                 { show ? 
                     <ContainsLinguage  Icon={props.Icon} />
                  : <></>}
@@ -26,11 +29,3 @@ export const ImageProject = (props:{thumb:StaticImageData, title:string, Icon:Ic
         </div>
     )
 }
-/*
-{ texto.trim() == "" ? <div className=" bg-white w-full h-full flex flex-row justify-center items-center object-cover transition-transform duration-800 ease-in-out transform-gpu hover:gap-4 hover:scale-110 rounded-xl  opacity-75 hover:opacity-90">
-                <p className="font-extrabold text-4xl">&lt;</p>
-                <p className="font-extrabold text-4xl">&#47;</p>
-                <p className="font-extrabold text-4xl">&gt;</p>
-            </div> : }
-
-*/

@@ -50,14 +50,12 @@ export const Javascript = () =>{
     }
     return(
         <div>
-            <div className=" hidden md:flex">
-                    <ScreenProjectsDesktop key={Math.floor(Math.random() * 1000)} projects={projects} />
+            <div className="hidden mini-tela:flex">
+                <ScreenProjectsDesktop key={Math.floor(Math.random() * 1000)} projects={projects} />
             </div>
-            <div className="md:hidden w-full">
+            <div className="mini-tela:hidden w-full">
                 <ScreenProjectMobile key={Math.floor(Math.random() * 1000)} projects={projects} />
             </div>
         </div>
     )
 }
-
-//https://gitpod.io/#https://github.com/MrMa-rio/myGame/

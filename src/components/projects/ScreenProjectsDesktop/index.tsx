@@ -26,13 +26,13 @@ export const ScreenProjectsDesktop = (props:{projects:ProjectsIcons }) =>{
                     return(
                         <div key={Math.floor(Math.random() * 1000)} >
                             <Link
-                            onClick={() => {targetProject(props.projects[result])} }
-                            to="thumbImages"
-                            spy={true}
-                            smooth={true}
-                            duration={1000}
-                            className=" w-full mini-tela:w-1/2 h-16"
-                            key={Math.floor(Math.random() * 1000)}
+                                onClick={() => {targetProject(props.projects[result])} }
+                                to="thumbImages"
+                                spy={true}
+                                smooth={true}
+                                duration={1000}
+                                className=" w-full mini-tela:w-1/2 h-16"
+                                key={Math.floor(Math.random() * 1000)}
                             >
                                 <ImageProject key={Math.floor(Math.random() * 1000)} thumb={props.projects[result].project} title={props.projects[result].title} Icon={props.projects[result].Icon} />
                             </Link>
@@ -45,4 +45,3 @@ export const ScreenProjectsDesktop = (props:{projects:ProjectsIcons }) =>{
         </div>
     )
 }
-//href={props.projects[result].Link}

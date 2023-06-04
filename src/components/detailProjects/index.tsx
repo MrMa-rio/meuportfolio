@@ -20,7 +20,6 @@ export const DetailProject = (props:{ project:Icon}) =>{
             <div className="w-fit flex justify-center items-center p-5 ">
                 <Image src={props.project.poster} alt={props.project.title} className="w-56 rounded-md shadow-lg rotate-6 shadow-dark-terciary dark:brightness-50 dark:hover:brightness-75 " />
             </div>
-
         </div>
     )
 }
