@@ -13,7 +13,7 @@ import { tailwindB, tailwindO,tailwindWM,
 
 export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function, darkMode:any}) =>{
 
-  const [screen, setScreen] = useState<any>(window.innerWidth)
+  const [screen, setScreen] = useState<number>(0)
   useEffect(() => {
     const handleResize = () => {
       setScreen(window.innerWidth);
