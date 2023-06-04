@@ -1,6 +1,6 @@
 'use client'
 import { Link } from "react-scroll"
-import { cache, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { IconsLP } from "components/iconsEvents/events"
 import { tailwindB, tailwindO,tailwindWM,
          javascriptB, javascriptO,javascriptWM,
@@ -10,26 +10,13 @@ import { tailwindB, tailwindO,tailwindWM,
          csharpB, csharpO,csharpWM,
          reactB, reactO,reactWM
          } from "./icons"
-import { win32 } from "path"
 
 export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function, darkMode:any}) =>{
 
-  const [screen, setScreen] = useState<number>(window ? window.innerWidth : 0)
-  useEffect(() => {
-    const handleResize = () => {
-      setScreen(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  },[screen])
-    
   return(
     <>
       <Link
-          to={ screen > 825 ? "thumbImages" : "thumbImageMobile" } 
+          to={ window.innerWidth > 825 ? "thumbImages" : "thumbImageMobile" } 
           spy={true}
           smooth={true}
           duration={1000}
