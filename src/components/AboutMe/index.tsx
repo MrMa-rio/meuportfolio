@@ -1,9 +1,12 @@
 import { FileText, Github, Linkedin,Phone,Mail, Copy, Copyright } from 'lucide-react';
-
+import Link from 'next/link';
 export const AboutMe = () => {
 
     const email = "mario.marsn@gmail.com"
     const telefone = "(16) 9 9228-3546"
+    const linkedin = "https://www.linkedin.com/in/marioalbertoneto/"
+    const github = "https://github.com/MrMa-rio"
+   
     return(
 
         <div className="w-full h-96 bg-terciary dark:bg-dark-quartenary flex justify-center items-center">
@@ -23,17 +26,18 @@ export const AboutMe = () => {
                 </div>
                  <hr className="bg-black brightness-50 w-64 h-1 border-none" />
                 <div className=" flex justify-center items-center gap-7 p-4 w-3/4 hover:stroke-white">
-                    <Github className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
-                    <Linkedin className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
-                    <FileText className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />                
+                    <a target='_blank' href={github}>
+                        <Github className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
+                    </a>
+                    <a target='_blank' href={linkedin} ><Linkedin className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" /></a>
+                    <Link href={""} download={"myResume.docx"}><FileText className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" /></Link>              
+                    
                 </div>
                 <div className='flex gap-2 font-semibold'>
                     <Copyright />
                     <p> Mario Alberto 2023</p>
                 </div>
-                
             </div>
-        
         
        {/* <div className="ssm:w-3/4 h-52 mini-tela:w-1/2 bg-secondary ">
           
