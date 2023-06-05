@@ -1,5 +1,6 @@
 import { FileText, Github, Linkedin,Phone,Mail, Copy, Copyright } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 export const AboutMe = () => {
 
     const email = "mario.marsn@gmail.com"
@@ -7,6 +8,7 @@ export const AboutMe = () => {
     const linkedin = "https://www.linkedin.com/in/marioalbertoneto/"
     const github = "https://github.com/MrMa-rio"
    
+    const [download, setDownload] = useState(false)
     return(
 
         <div className="w-full h-96 bg-terciary dark:bg-dark-quartenary flex justify-center items-center">
@@ -30,8 +32,8 @@ export const AboutMe = () => {
                         <Github className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
                     </a>
                     <a target='_blank' href={linkedin} ><Linkedin className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" /></a>
-                    <Link href={""} download={"myResume.docx"}><FileText className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" /></Link>              
-                    
+                    <a onClick={() => setDownload(true)} ><FileText className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" /></a>              
+                    {download ? <iframe className='hidden' src='https://github.com/MrMa-rio/meuportfolio/raw/main/src/assets/Documents/Curriculo%20Mario%202023.docx' ></iframe> : <></>}
                 </div>
                 <div className='flex gap-2 font-semibold'>
                     <Copyright />
