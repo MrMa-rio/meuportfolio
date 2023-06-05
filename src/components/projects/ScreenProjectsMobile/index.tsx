@@ -6,11 +6,13 @@ import { Pagination } from "swiper"; //
 import { Link } from "react-scroll";
 import { ImageProject } from "../ImageProjects";
 import { ProjectEmpty } from "../Main/ProjectEmpty";
+import { DetailProjectMobile } from "components/detailProjects";
 
 export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
 
     const [showDetail,setShowDetail] = useState<boolean>()
     const [project, setProject] = useState<Icon>(ProjectEmpty)
+    const [animationMobile, setAnimationMobile] = useState<number>(1)
     const targetProject = (result:Icon) =>{
         if(result.description){
             setShowDetail(true)
@@ -20,6 +22,7 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
         }
         setProject(result)
     }
+    
 
   return (
     <div className="relative w-screen thumbImageMobile">
@@ -28,11 +31,13 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
             slidesPerView={1.8}
             initialSlide={1}
             spaceBetween={5}
+            onActiveIndexChange={(result) => {setAnimationMobile(result.activeIndex);targetProject(props.projects[result.activeIndex+1]) }}
         >
         { Object.keys(props.projects).map((result) => {
             return(
                 <div key={Math.floor(Math.random() * 1000)} >
-                    <SwiperSlide key={Math.floor(Math.random() * 1000)} >
+                    
+                    <SwiperSlide key={Math.floor(Math.random() * 1000)}  >
                         <div key={Math.floor(Math.random() * 1000)} className="w-full relative h-full flex justify-center items-center" >
                             <Link
                                 onClick={() => {targetProject(props.projects[result])} }
@@ -42,7 +47,7 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
                                 duration={1000}
                                 key={Math.floor(Math.random() * 1000)}
                             >
-                                <ImageProject key={Math.floor(Math.random() * 1000)} thumb={props.projects[result].poster} title={props.projects[result].title} Icon={props.projects[result].Icon} />
+                                <ImageProject key={Math.floor(Math.random() * 1000)} thumb={props.projects[result].poster} title={props.projects[result].title} Icon={props.projects[result].Icon} animation={animationMobile == Number(result)-1 ? true : false} />
                             </Link>
                         </div>
                     </SwiperSlide>
@@ -50,6 +55,8 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
             )
         })}
       </Swiper>
+      { showDetail ? 
+        <DetailProjectMobile project={project} /> : <></>}
     </div>
   );
 }

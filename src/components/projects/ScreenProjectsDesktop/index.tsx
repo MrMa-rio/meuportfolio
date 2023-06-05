@@ -34,7 +34,7 @@ export const ScreenProjectsDesktop = (props:{projects:ProjectsIcons }) =>{
                                 className=" w-full mini-tela:w-1/2 h-16"
                                 key={Math.floor(Math.random() * 1000)}
                             >
-                                <ImageProject key={Math.floor(Math.random() * 1000)} thumb={props.projects[result].project} title={props.projects[result].title} Icon={props.projects[result].Icon} />
+                                <ImageProject key={Math.floor(Math.random() * 1000)} thumb={props.projects[result].project} title={props.projects[result].title} Icon={props.projects[result].Icon} animation={false} />
                             </Link>
                         </div>
                     )

@@ -28,7 +28,7 @@ export const Javascript = () =>{
             Icon: projectIcons[1],
             site: "https://gitpod.io/#https://github.com/MrMa-rio/myGame/",
             codigo: "https://github.com/MrMa-rio/myGame",
-            description: "Esse sem duvidas foi um desafio para mim, nele aprendi e desenvolvi coisa que eu jamais achava que conseguiria(por mais que ainda tenha muita coisa para adicionar), o objetivo desse projeto não foi somente criar um jogo similar ao da cobrinha, ele também foi para eu aplicar um dos conceitos mais dificéis para um programador(bom..é o mais dificil para mim até agora), o algoritmo dele consiste em varias funções e metodos (quase) totalmente desacoplados, digo isso porque quem for ver vai saber. O jogo em si tem o objetivo principal de, quem coletar mais frutinhas vence, então foi implementado todo um sistema de pontuação que irá ser exibido na tela, tem também uma compatibilidade simples para jogadores mobile.",
+            description: "Desenvolvi um jogo inspirado na cobrinha com algoritmo bem estruturado e desacoplado, priorizando um código limpo. Implementei um sistema de pontuação competitivo e garanti a acessibilidade em dispositivos móveis. Foi uma jornada de aprendizado e superação, com funcionalidades a serem adicionadas no futuro para aprimorar a experiência do jogo.",
             poster: meuprimeirojogoV
         },
         2:{project: calculadora,
