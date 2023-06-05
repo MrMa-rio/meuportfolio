@@ -35,6 +35,14 @@ import reactWM from '../../assets/icons/icons_white_com_moldura/react.svg'
 
 import { StaticImageData } from 'next/image'
 
+import githubB from '../../assets/icons/github_black.svg'
+import linkedinB from '../../assets/icons/linkedin_black.svg'
+import instagramB from '../../assets/icons/instagram_black.svg'
+import githubO from '../../assets/icons/github_orange.svg'
+import linkedinO from '../../assets/icons/linkedin_orange.svg'
+import instagramO from '../../assets/icons/instagram_orange.svg'
+
+export {githubB,githubO,linkedinB,linkedinO,instagramB,instagramO}
 
 export {tailwindB, tailwindO, tailwindW, tailwindWM}
 

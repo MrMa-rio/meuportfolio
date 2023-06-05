@@ -25,7 +25,7 @@ export const ScreenProjectMobile = (props:{projects:ProjectsIcons }) => {
     
 
   return (
-    <div className="relative w-screen thumbImageMobile">
+    <div className="relative w-screen">
         <Swiper
             centeredSlides={true}
             slidesPerView={1.8}

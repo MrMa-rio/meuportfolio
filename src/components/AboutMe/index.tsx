@@ -1,0 +1,43 @@
+import { FileText, Github, Linkedin,Phone,Mail, Copy, Copyright } from 'lucide-react';
+
+export const AboutMe = () => {
+
+    const email = "mario.marsn@gmail.com"
+    const telefone = "(16) 9 9228-3546"
+    return(
+
+        <div className="w-full h-96 bg-terciary dark:bg-dark-quartenary flex justify-center items-center">
+            <div className="flex justify-center bg-secondary dark:bg-dark-quinary bg-opacity-60 rounded-lg items-center ssm:w-3/4 h-fit mini-tela:w-1/2 flex-col gap-2 p-3">
+                <div className="w-fit pt-10 flex justify-center items-start flex-col dark:text-white dark:brightness-75 gap-3">
+                    <div className='flex gap-2'>
+                        <Phone />
+                        <p>{telefone}</p>
+                        <Copy className='cursor-pointer dark:stroke-white dark:brightness-95 hover:stroke-white dark:hover:stroke-dark-terciary hover:opacity-80' onClick={ () => navigator.clipboard.writeText(telefone)} /> 
+                    </div>
+                    <div className='flex gap-2'>
+                        <Mail />
+                        <a target='_blank' href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}>{email}</a>
+                        <Copy className='cursor-pointer dark:stroke-white dark:brightness-95 hover:stroke-white dark:hover:stroke-dark-terciary hover:opacity-80' onClick={ () => navigator.clipboard.writeText(email)} /> 
+                    </div>
+                   
+                </div>
+                 <hr className="bg-black brightness-50 w-64 h-1 border-none" />
+                <div className=" flex justify-center items-center gap-7 p-4 w-3/4 hover:stroke-white">
+                    <Github className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
+                    <Linkedin className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />
+                    <FileText className=" w-10 h-10 dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-terciary hover:stroke-white hover:opacity-80" />                
+                </div>
+                <div className='flex gap-2 font-semibold'>
+                    <Copyright />
+                    <p> Mario Alberto 2023</p>
+                </div>
+                
+            </div>
+        
+        
+       {/* <div className="ssm:w-3/4 h-52 mini-tela:w-1/2 bg-secondary ">
+          
+        </div>*/}
+      </div>
+    )
+}

@@ -4,7 +4,7 @@ import { tailwindB,javascriptB,htmlB,csharpB,cssB,pythonB,reactB, tailwindW, jav
 
 export const MainProject = (props:{typeLP:string,darkMode:any})=>{
     return(
-        <div  className="bg-secondary dark:bg-dark-secondary w-full py-20 mini-tela:py-72 flex justify-center items-center ">
+        <div className="thumbImages bg-secondary dark:bg-dark-secondary w-full py-20 mini-tela:py-72 flex justify-center items-center ">
             <div className=" bg-black w-full mxl:w-3/4 h-fit ssm:px-5 mini-tela:px-16 bg-opacity-5 rounded-md">
                 <div className="relative py-4 flex justify-between items-center ">
                     <h1 className=" text-opacity-50 text-3xl text-white font-bold">{props.typeLP}</h1>

@@ -12,32 +12,11 @@ import { tailwindB, tailwindO,tailwindWM,
          } from "./icons"
 
 export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function, darkMode:any}) =>{
-
-  const mini_tela = 825
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-    handleResize()
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    }
-  }, [])
-
+    
   return(
     <>
       <Link
-          to={ windowSize.width >= mini_tela ? "thumbImages" : "thumbImageMobile" }  //825 tamanho da {mini-tela:}
+          to="thumbImages" 
           spy={true}
           smooth={true}
           duration={1000}

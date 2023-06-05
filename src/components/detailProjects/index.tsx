@@ -58,3 +58,11 @@ export const DetailProjectMobile = (props:{ project:Icon}) =>{
         </div>
     )
 }
+
+
+/**
+    Fazer um sobre mim, 
+    criar um carregamento naas imagens, 
+    olhar todo o codigo e limpar
+
+ */

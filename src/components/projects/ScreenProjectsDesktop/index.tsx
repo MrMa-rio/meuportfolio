@@ -20,14 +20,14 @@ export const ScreenProjectsDesktop = (props:{projects:ProjectsIcons }) =>{
         setProject(result)
     }
     return(
-        <div className="thumbImages flex ssm:flex-col gap-16 justify-center items-center "> 
+        <div className=" detailProjects flex ssm:flex-col gap-16 justify-center items-center "> 
             <div className="flex flex-col mini-tela:flex-row mini-tela:gap-6 " >
                 { Object.keys(props.projects).map((result) => {
                     return(
                         <div key={Math.floor(Math.random() * 1000)} >
                             <Link
                                 onClick={() => {targetProject(props.projects[result])} }
-                                to="thumbImages"
+                                to="detailProjects"
                                 spy={true}
                                 smooth={true}
                                 duration={1000}

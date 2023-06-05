@@ -6,6 +6,7 @@ import ArrowUp from '../assets/icons/arrowUp.svg'
 import React, { useState } from 'react'
 import { Navbar, TypingAnimation, MainProject, IconsLinguage } from "components"
 import { Link } from "react-scroll"
+import { AboutMe } from "components/AboutMe"
 
 export default function Home() {
   
@@ -26,7 +27,7 @@ export default function Home() {
   }
   return (
     <>
-      <div id="AboutMe" className='flex justify-center items-center flex-col gap-8 h-screen bg-gradient-to-t from-secondary to-terciary  dark:from-dark-secondary dark:to-dark-primary dark:transition-colors dark:delay-200 dark:duration-1000 '>
+      <div id="Initial" className='flex justify-center items-center flex-col gap-8 h-screen bg-gradient-to-t from-secondary to-terciary  dark:from-dark-secondary dark:to-dark-primary dark:transition-colors dark:delay-200 dark:duration-1000 '>
         <div className=" flex ssm:flex-col ssm:gap-5 mini-tela:gap-16 justify-center mini-tela:flex-row mini-tela:justify-center items-center mini-tela:w-1/2 mini-tela:px-32">
           <TypingAnimation />
          { MyImage === "dark" ? <Image src={eu_night} alt="MeuEuAnimado" className="rounded-full w-64 " /> : <Image src={eu} alt="MeuEuAnimado" className="rounded-full w-64 " />}
@@ -41,15 +42,20 @@ export default function Home() {
             <MainProject typeLP={typeLP} darkMode={MyImage} />
          : <></>}
       </div>
+
+
+      <AboutMe />
+
+
       {popup ? 
         <div>
           <Link
-            to="AboutMe"
+            to="Initial"
             spy={true}
             smooth={true}
             duration={1000}
           >
-            <button className="fixed z-50 bottom-20 right-14 shadow-sm shadow-secondary bg-terciary opacity-90  w-16 h-16 rounded-full flex justify-center items-center " onClick={() => { setTimeout(() => setScreen(false), 950); setPopup(false)}}><Image src={ArrowUp} alt="ArrowUp" className="w-3/4 h-3/4" /> </button> 
+            <button className="fixed z-50 bottom-20 right-14 shadow-md shadow-secondary bg-terciary opacity-90  w-16 h-16 rounded-full flex justify-center items-center " onClick={() => { setTimeout(() => setScreen(false), 950); setPopup(false)}}><Image src={ArrowUp} alt="ArrowUp" className="w-3/4 h-3/4" /> </button> 
           </Link>
         </div> 
         : 
