@@ -22,7 +22,7 @@ export const Navbar = () =>{
                 <a href="https://www.linkedin.com/in/marioalbertoneto"> <Linkedin className='dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-quartenary hover:stroke-secondary' /> </a>
                 <a href="https://github.com/MrMa-rio"> <Github className='dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-quartenary hover:stroke-secondary' /> </a>
                 <a href="https://www.instagram.com/mr_mario_alberto/"> <Instagram className='dark:stroke-white dark:brightness-75 dark:hover:stroke-dark-quartenary hover:stroke-secondary' /> </a>
-                </div>
+            </div>
         </div>
     )
 }

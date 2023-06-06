@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Tailwind, Javascript, Html, Css, CSharp, Python, ReactJs } from "./imports"
 import { tailwindB,javascriptB,htmlB,csharpB,cssB,pythonB,reactB, tailwindW, javascriptW, htmlW, cssW, csharpW, pythonW, reactW } from "components/iconsLinguage/icons"
+import { AboutMe } from "components/AboutMe"
 
 export const MainProject = (props:{typeLP:string,darkMode:any})=>{
     return(
@@ -24,6 +25,8 @@ export const MainProject = (props:{typeLP:string,darkMode:any})=>{
                     {props.typeLP == "CSharp" ?  <CSharp /> : <></>}
                     {props.typeLP == "Python" ?  <Python /> : <></>}
                     {props.typeLP == "ReactJs" ?  <ReactJs /> : <></>}
+                    {props.typeLP == "Sobre Mim" ?  <AboutMe /> : <></>}
+
                 </div>
             </div>
          </div>

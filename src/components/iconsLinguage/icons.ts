@@ -42,6 +42,12 @@ import githubO from '../../assets/icons/github_orange.svg'
 import linkedinO from '../../assets/icons/linkedin_orange.svg'
 import instagramO from '../../assets/icons/instagram_orange.svg'
 
+import euO from '../../assets/images/eu_orange_circle.png'
+import euN from '../../assets/images/eu_night_circle.png'
+import euL from '../../assets/images/eu_light_circle.png'
+
+export {euL,euN,euO}
+
 export {githubB,githubO,linkedinB,linkedinO,instagramB,instagramO}
 
 export {tailwindB, tailwindO, tailwindW, tailwindWM}

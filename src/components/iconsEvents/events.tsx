@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import React, { useState } from "react"
 
 export const SocialImage = (props:{image_black:string, image_white:string, linkSocial:string, alt:string}) =>{
@@ -26,7 +26,7 @@ export const SocialImage = (props:{image_black:string, image_white:string, linkS
         </div>
     )
 }
-export const IconsLP = (props:{image_black:string, image_white:string, alt:string, screen:Function, popup:Function, type:string}) =>{
+export const IconsLP = (props:{image_black:string|StaticImageData, image_white:string|StaticImageData, alt:string, screen:Function, popup:Function, type:string}) =>{
 
     const [isHovered, setIsHovered] = useState(false)
     const handleMouseEnter = () => {

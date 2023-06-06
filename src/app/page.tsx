@@ -6,7 +6,7 @@ import ArrowUp from '../assets/icons/arrowUp.svg'
 import React, { useState } from 'react'
 import { Navbar, TypingAnimation, MainProject, IconsLinguage } from "components"
 import { Link } from "react-scroll"
-import { AboutMe } from "components/AboutMe"
+import { Contacts } from "components/Contacts"
 
 export default function Home() {
   
@@ -44,7 +44,9 @@ export default function Home() {
       </div>
 
 
-      <AboutMe />
+      <footer>
+        <Contacts />
+      </footer>
 
 
       {popup ? 
