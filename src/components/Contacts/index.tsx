@@ -16,7 +16,7 @@ export const Contacts = () => {
             <div className="flex justify-center bg-secondary dark:bg-dark-quinary bg-opacity-60 rounded-lg items-center ssm:w-3/4 h-fit mini-tela:w-1/2 flex-col gap-2 p-3">
                 <div className="w-fit pt-10 flex justify-center items-start flex-col dark:text-white dark:brightness-75 gap-3">
                     <div className='flex gap-2'>
-                        <Phone className='rounded-full border border-black p-1' />
+                        <Phone className='rounded-full border border-black dark:border-white p-1' />
                         <a target='_blank' href="https://api.whatsapp.com/send?phone=16992283546">
                             <p>{telefone}</p>
                         </a>
