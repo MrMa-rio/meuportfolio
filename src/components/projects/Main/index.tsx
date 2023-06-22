@@ -1,8 +1,7 @@
 import Image from "next/image"
-import { Tailwind, Javascript, Html, Css, CSharp, typescript, ReactJs } from "./imports"
+import { Tailwind, Javascript, Html, Css, CSharp, Typescript, ReactJs } from "./imports"
 import { tailwindB,javascriptB,htmlB,csharpB,cssB,typescriptB,reactB, tailwindW, javascriptW, htmlW, cssW, csharpW, typescriptW, reactW } from "components/iconsLinguage/icons"
 import { AboutMe } from "components/AboutMe"
-import { Typescript } from "./Typescript"
 
 export const MainProject = (props:{typeLP:string,darkMode:any})=>{
     return(
