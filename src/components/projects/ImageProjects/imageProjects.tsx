@@ -14,7 +14,9 @@ export {meuprimeirojogo,meuprimeirojogoV,meusegundojogo,meusegundojogoV, calcula
 // REACTJS ------------------------------------------------
 import cornflixbr from '../../../assets/images/p_cornflixbr.png'
 import cornflixbrV from '../../../assets/images/cornflixbrV.png'
-export {cornflixbr, cornflixbrV}
+import breakcoffe from '../../../assets/images/breakcoffe.png'
+import breakcoffeV from '../../../assets/images/breakcoffeV.png'
+export {cornflixbr, cornflixbrV, breakcoffe,breakcoffeV}
 // TAILWINDCSS --------------------------------------------
 //---
 // HTML ---------------------------------------------------
@@ -29,5 +31,5 @@ export {curiosidadesandroid,curiosidadesV, cordel,cordelV, minhasredes,minhasred
 //---
 // CSHARP -------------------------------------------------
 //---
-// PYTHON -------------------------------------------------
+// typescript -------------------------------------------------
 //---

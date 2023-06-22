@@ -2,11 +2,11 @@
 import Image from "next/image"
 import eu from "../assets/images/eu_light.png"
 import eu_night from "../assets/images/eu_night3.png"
-import ArrowUp from '../assets/icons/arrowUp.svg'
 import React, { useState } from 'react'
 import { Navbar, TypingAnimation, MainProject, IconsLinguage } from "components"
 import { Link } from "react-scroll"
 import { Contacts } from "components/Contacts"
+import { ChevronUp } from "lucide-react"
 
 export default function Home() {
   
@@ -57,7 +57,16 @@ export default function Home() {
             smooth={true}
             duration={1000}
           >
-            <button className="fixed z-50 bottom-20 right-14 shadow-md shadow-secondary bg-terciary opacity-90  w-16 h-16 rounded-full flex justify-center items-center " onClick={() => { setTimeout(() => setScreen(false), 950); setPopup(false)}}><Image src={ArrowUp} alt="ArrowUp" className="w-3/4 h-3/4" /> </button> 
+            <button className="fixed z-50 bottom-20 right-14 shadow-md shadow-secondary dark:shadow-black bg-terciary dark:bg-dark-quartenary opacity-70 hover:opacity-100  w-16 h-16 rounded-full flex justify-center items-center "
+              onClick={() => { 
+                setTimeout(() =>{
+                  setScreen(false)
+                }, 950) 
+                setPopup(false)
+                }}
+            > 
+              <ChevronUp className="w-3/4 h-1/2 dark:stroke-white" />
+            </button> 
           </Link>
         </div> 
         : 

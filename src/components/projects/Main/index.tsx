@@ -1,7 +1,8 @@
 import Image from "next/image"
-import { Tailwind, Javascript, Html, Css, CSharp, Python, ReactJs } from "./imports"
-import { tailwindB,javascriptB,htmlB,csharpB,cssB,pythonB,reactB, tailwindW, javascriptW, htmlW, cssW, csharpW, pythonW, reactW } from "components/iconsLinguage/icons"
+import { Tailwind, Javascript, Html, Css, CSharp, typescript, ReactJs } from "./imports"
+import { tailwindB,javascriptB,htmlB,csharpB,cssB,typescriptB,reactB, tailwindW, javascriptW, htmlW, cssW, csharpW, typescriptW, reactW } from "components/iconsLinguage/icons"
 import { AboutMe } from "components/AboutMe"
+import { Typescript } from "./Typescript"
 
 export const MainProject = (props:{typeLP:string,darkMode:any})=>{
     return(
@@ -14,7 +15,7 @@ export const MainProject = (props:{typeLP:string,darkMode:any})=>{
                     {props.typeLP == "Html" ? <Image src={ props.darkMode != "dark" ? htmlB : htmlW} className="w-20 opacity-50" alt={props.typeLP} />  : <></>}
                     {props.typeLP == "Css" ? <Image src={ props.darkMode != "dark" ? cssB : cssW} className="w-20 opacity-50" alt={props.typeLP} /> : <></>}
                     {props.typeLP == "CSharp" ? <Image src={ props.darkMode != "dark" ? csharpB : csharpW} className="w-20 opacity-50" alt={props.typeLP} /> : <></>}
-                    {props.typeLP == "Python" ? <Image src={ props.darkMode != "dark" ? pythonB : pythonW} className="w-20 opacity-50" alt={props.typeLP} /> : <></>}
+                    {props.typeLP == "Typescript" ? <Image src={ props.darkMode != "dark" ? typescriptB : typescriptW} className="w-20 opacity-50" alt={props.typeLP} /> : <></>}
                     {props.typeLP == "ReactJs" ? <Image src={ props.darkMode != "dark" ? reactB : reactW} className="w-20 opacity-50" alt={props.typeLP} /> : <></>}
                 </div>
                 <div className=" flex justify-center items-center ">
@@ -23,7 +24,7 @@ export const MainProject = (props:{typeLP:string,darkMode:any})=>{
                     {props.typeLP == "Html" ?  <Html /> : <></>}
                     {props.typeLP == "Css" ?  <Css /> : <></>}
                     {props.typeLP == "CSharp" ?  <CSharp /> : <></>}
-                    {props.typeLP == "Python" ?  <Python /> : <></>}
+                    {props.typeLP == "Typescript" ?  <Typescript /> : <></>}
                     {props.typeLP == "ReactJs" ?  <ReactJs /> : <></>}
                     {props.typeLP == "Sobre Mim" ?  <AboutMe /> : <></>}
 

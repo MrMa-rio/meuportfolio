@@ -3,10 +3,10 @@ import tailwindO from '../../assets/icons/tailwind_orange.svg'
 import tailwindW from '../../assets/icons/tailwindW.svg'
 import tailwindWM from '../../assets/icons/icons_white_com_moldura/tailwind.svg'
 
-import pythonB from '../../assets/icons/python_black.svg'
-import pythonO from '../../assets/icons/python_orange.svg'
-import pythonW from '../../assets/icons/pythonW.svg'
-import pythonWM from '../../assets/icons/icons_white_com_moldura/python.svg'
+import typescriptB from '../../assets/icons/typescript_black.svg'
+import typescriptO from '../../assets/icons/typescript_orange.svg'
+import typescriptW from '../../assets/icons/typescriptW.svg'
+import typescriptWM from '../../assets/icons/icons_white_com_moldura/typescript.svg'
 
 import javascriptB from '../../assets/icons/javascript_black.svg'
 import javascriptO from '../../assets/icons/javascript_orange.svg'
@@ -52,7 +52,7 @@ export {githubB,githubO,linkedinB,linkedinO,instagramB,instagramO}
 
 export {tailwindB, tailwindO, tailwindW, tailwindWM}
 
-export {pythonB, pythonO, pythonW, pythonWM}
+export {typescriptB, typescriptO, typescriptW, typescriptWM}
 
 export {javascriptB, javascriptO, javascriptW, javascriptWM}
 

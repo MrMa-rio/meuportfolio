@@ -1,13 +1,12 @@
 'use client'
 import { Link } from "react-scroll"
-import React, { useEffect, useState } from "react"
 
 import { IconsLP } from "components/iconsEvents/events"
 import { tailwindB, tailwindO,tailwindWM,
          javascriptB, javascriptO,javascriptWM,
          htmlB, htmlO,htmlWM,
          cssB, cssO,cssWM,
-         pythonB, pythonO,pythonWM,
+         typescriptB, typescriptO,typescriptWM,
          csharpB, csharpO,csharpWM,
          reactB, reactO,reactWM, euL, euN, euO
          } from "./icons"
@@ -30,7 +29,7 @@ export const IconsLinguage = (props:{toggleScreen:Function, togglePopup:Function
             <IconsLP image_black={ props.darkMode != "dark" ? javascriptO : javascriptWM } image_white={javascriptB} alt="Javascript" screen={props.toggleScreen} popup={props.togglePopup} type={"Javascript"} />
             <IconsLP image_black={ props.darkMode != "dark" ? reactO : reactWM } image_white={reactB} alt="ReactJs" screen={props.toggleScreen} popup={props.togglePopup} type={"ReactJs"} />
             <IconsLP image_black={ props.darkMode != "dark" ? tailwindO : tailwindWM } image_white={tailwindB} alt="TailwindCSS" screen={props.toggleScreen} popup={props.togglePopup} type={"Tailwind"} />
-            <IconsLP image_black={ props.darkMode != "dark" ? pythonO : pythonWM } image_white={pythonB} alt="Python" screen={props.toggleScreen} popup={props.togglePopup} type={"Python"} />
+            <IconsLP image_black={ props.darkMode != "dark" ? typescriptO : typescriptWM } image_white={typescriptB} alt="Typescript" screen={props.toggleScreen} popup={props.togglePopup} type={"Typescript"} />
             <IconsLP image_black={ props.darkMode != "dark" ? csharpO : csharpWM } image_white={csharpB} alt="CSharp" screen={props.toggleScreen} popup={props.togglePopup} type={"CSharp"} />
           </div>
           <div className="w-9 flex justify-center items-center cursor-pointer ">
