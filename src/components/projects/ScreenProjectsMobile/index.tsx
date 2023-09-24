@@ -2,7 +2,6 @@ import { Icon, ProjectsIcons } from "components/iconsLinguage/icons"
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination } from "swiper"; //
 import { Link } from "react-scroll";
 import { ImageProject } from "../ImageProjects";
 import { ProjectEmpty } from "../Main/ProjectEmpty";
